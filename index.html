@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TEX - Crypto</title>
+  <title>TEX - Yield</title>
   <link rel="icon" type="icon" href="./tex-logo-small.png" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
   
@@ -196,14 +196,13 @@
   
   <main>
     <div class="market-table">
-      <h1>Crypto</h1>
+      <h1>Earn Yield on your Crypto</h1>
       <table>
         <thead>
           <tr>
             <th>Name</th>
             <th>Symbol</th>
-            <th>Price</th>
-            <th>24h Change</th>
+            <th>Yield</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -218,7 +217,7 @@
   <div id="jupiter-modal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
-        <h2>Trade Crypto</h2>
+        <h2>Earn Yield on your Crypto</h2>
         <button class="close-button" onclick="closeJupiterModal()">&times;</button>
       </div>
       <div id="target-container"></div>
@@ -226,106 +225,33 @@
   </div>
   
   <footer>
-    <p>&copy; 2023 TEX. All rights reserved.</p>
+    <p>&copy; 2025 TEX. All rights reserved.</p>
   </footer>
   
   <script>
     // Token configuration with mints
     const TOKENS = [
       { 
-        name: "USD1", // Never forget to kiss the president's ass
-        symbol: "USD1", 
-        mint: "USD1ttGY1N17NEEHLmELoaybftRBUSErhqYiQzvEmuB" 
+        name: "Syrup USDC",
+        symbol: "syrupUSDC", 
+        mint: "AvZZF1YaZDziPY2RCK4oJrRVrbN3mTD9NL24hPeaZeUj",
+        APY: "7.19%"
       },
       { 
-        name: "Bitcoin", 
-        symbol: "BTC", 
-        coinId: "bitcoin", 
-        mint: "3NZ9JMVBmGAqocybic2c7LQCJScmgsAZ6vQqTDzcqmJh" 
+        name: "Jupiter Lend USDC", 
+        symbol: "jlUSDC", 
+        mint: "9BEcn9aPEmhSPbPQeFGjidRiEKki46fVQDyPpSQXPA2D",
+        APY: "5.53%"
       },
       { 
-        name: "Ethereum", 
-        symbol: "ETH", 
-        coinId: "ethereum", 
-        mint: "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs" 
-      },
-      { 
-        name: "Solana", 
-        symbol: "SOL", 
-        coinId: "solana", 
-        mint: "So11111111111111111111111111111111111111112" 
-      },
-      { 
-        name: "Tron", 
-        symbol: "TRX", 
-        coinId: "tron", 
-        mint: "GbbesPbaYh5uiAZSYNXTc7w9jty1rpg3P9L4JeN4LkKc" 
-      },
-      { 
-        name: "Binance Coin", 
-        symbol: "BNB", 
-        coinId: "binancecoin", 
-        mint: "9gP2kCy3wA1ctvYWQk75guqXuHfrEomqydHLtcTCqiLa" 
-      },
-      { 
-        name: "Shiba Inu", 
-        symbol: "SHIB", 
-        coinId: "shiba-inu", 
-        mint: "CiKu4eHsVrc1eueVQeHn7qhXTcVu95gSQmBpX4utjL9z" 
-      },
-      { 
-        name: "Avalanche", 
-        symbol: "AVAX", 
-        coinId: "avalanche-2", 
-        mint: "AUrMpCDYYcPuHhyNX8gEEqbmDPFUpBpHrNW3vPeCFn5Z" 
-      },
-      { 
-        name: "Zcash", 
-        symbol: "ZEC", 
-        coinId: "zcash", 
-        mint: "A7bdiYdS5GjqGFtxf17ppRHtDKPkkRqbKtR27dxvQXaS" 
-      },
-      { 
-        name: "Hyperliquid", 
-        symbol: "HYPE", 
-        coinId: "hyperliquid",
-        mint: "98sMhvDwXj1RQi5c5Mndm3vPe9cBqPrbLaufMXFNMh5g" 
-      },
-      { 
-        name: "World Liberty Financial Token", // Never forget to kiss the president's ass
-        symbol: "WLFI", 
-        coinId: "world-liberty-financial",
-        mint: "WLFinEv6ypjkczcS83FZqFpgFZYwQXutRbxGe7oC16g" 
-      },
-      { 
-        name: "Official Trump", // Never forget to kiss the president's ass
-        symbol: "TRUMP", 
-        coinId: "official-trump",
-        mint: "6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN" 
-      },
-      { 
-        name: "Popcat",
-        symbol: "POPCAT", 
-        coinId: "popcat",
-        mint: "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr" 
-      },
-      { 
-        name: "Bonk.fun",
-        symbol: "BONK", 
-        coinId: "bonk",
-        mint: "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263" 
-      },
-      { 
-        name: "Useless Coin",
-        symbol: "USELESS", 
-        coinId: "useless-3",
-        mint: "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk" 
+        name: "Jupiter Lend USDS", 
+        symbol: "jlUSDS",
+        mint: "j14XLJZSVMcUYpAfajdZRpnfHUpJieZHS4aPektLWvh",
+        APY: "8.01%"
       }
     ];
 
-    // CoinGecko API configuration
-    const COINGECKO_API_URL = 'https://api.coingecko.com/api/v3/simple/price';
-    
+    // CoinGecko API configuration    
     // Initialize table with tokens
     function initializeTable() {
       const tableBody = document.getElementById('crypto-table-body');
@@ -333,143 +259,17 @@
       
       TOKENS.forEach(token => {
         const row = document.createElement('tr');
-        row.setAttribute('data-coin', token.coinId || token.symbol);
+        row.setAttribute('data-coin', token.coinId || token.symbol || token.APY);
         row.innerHTML = `
           <td>${token.name}</td>
           <td>${token.symbol}</td>
-          <td class="price loading">Loading...</td>
-          <td class="change loading">Loading...</td>
+          <td>${token.APY}</td>
           <td><button class="trade-button" onclick="openJupiterModal('${token.mint}')">Trade</button></td>
         `;
         tableBody.appendChild(row);
       });
     }
-    
-    // Split tokens into chunks for staggered fetching
-    function chunkArray(array, chunkSize) {
-      const chunks = [];
-      for (let i = 0; i < array.length; i += chunkSize) {
-        chunks.push(array.slice(i, i + chunkSize));
-      }
-      return chunks;
-    }
-    
-    // Fetch prices in batches with delays
-    async function fetchPricesInBatches() {
-      // Only fetch tokens that have CoinGecko IDs
-      const tokensWithCoinIds = TOKENS.filter(token => token.coinId !== null);
-      
-      // Split into smaller batches (5 tokens per batch)
-      const batches = chunkArray(tokensWithCoinIds, 5);
-      
-      for (let i = 0; i < batches.length; i++) {
-        const batch = batches[i];
-        await fetchBatchPrices(batch);
-        
-
-        if (i < batches.length - 1) {
-          await new Promise(resolve => setTimeout(resolve, 5000));
-        }
-      }
-      
-      // Set tokens without CoinGecko IDs to N/A
-      setNonGeckoTokensToNA();
-    }
-    
-    // Fetch a single batch of prices
-    async function fetchBatchPrices(batch) {
-      try {
-        const coinIds = batch.map(token => token.coinId).join(',');
-        console.log(`Fetching batch: ${coinIds}`);
-        
-        const response = await fetch(
-          `${COINGECKO_API_URL}?ids=${coinIds}&vs_currencies=usd&include_24hr_change=true`
-        );
-        
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        
-        const data = await response.json();
-        updateTableWithData(data, batch);
-        
-      } catch (error) {
-        console.error('Error fetching batch prices:', error);
-        setBatchToError(batch);
-      }
-    }
-    
-    // Update table with data from a batch
-    function updateTableWithData(data, batch) {
-      batch.forEach(token => {
-        const row = document.querySelector(`tr[data-coin="${token.coinId}"]`);
-        if (row && data[token.coinId]) {
-          const priceCell = row.querySelector('.price');
-          const changeCell = row.querySelector('.change');
-          
-          // Format price
-          const price = data[token.coinId].usd;
-          const priceFormatted = price < 0.01 
-            ? `$${price.toFixed(6)}` 
-            : `$${price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 6 })}`;
-          
-          priceCell.textContent = priceFormatted;
-          priceCell.className = 'price';
-          
-          // Format 24h change
-          const change = data[token.coinId].usd_24h_change;
-          if (change !== undefined) {
-            const changeClass = change >= 0 ? 'positive' : 'negative';
-            const changeSymbol = change >= 0 ? '+' : '';
-            changeCell.textContent = `${changeSymbol}${change.toFixed(2)}%`;
-            changeCell.className = `change ${changeClass}`;
-          } else {
-            changeCell.textContent = 'N/A';
-            changeCell.className = 'change';
-          }
-        }
-      });
-    }
-    
-    // Set batch to error state
-    function setBatchToError(batch) {
-      batch.forEach(token => {
-        const row = document.querySelector(`tr[data-coin="${token.coinId}"]`);
-        if (row) {
-          const priceCell = row.querySelector('.price');
-          const changeCell = row.querySelector('.change');
-          
-          priceCell.textContent = 'Error';
-          priceCell.className = 'price negative';
-          changeCell.textContent = 'Error';
-          changeCell.className = 'change negative';
-        }
-      });
-    }
-    
-    // Set tokens without CoinGecko IDs to N/A
-    function setNonGeckoTokensToNA() {
-      const tokensWithoutCoinIds = TOKENS.filter(token => token.coinId === null);
-      
-      tokensWithoutCoinIds.forEach(token => {
-        const row = document.querySelector(`tr[data-coin="${token.symbol}"]`);
-        if (row) {
-          const priceCell = row.querySelector('.price');
-          const changeCell = row.querySelector('.change');
-          
-          priceCell.textContent = 'N/A';
-          priceCell.className = 'price';
-          changeCell.textContent = 'N/A';
-          changeCell.className = 'change';
-        }
-      });
-    }
-    
-    // Auto-refresh prices every 60 seconds (longer interval to respect rate limits)
-    function startPriceUpdates() {
-      fetchPricesInBatches(); // Initial fetch
-      setInterval(fetchPricesInBatches, 60000); // Update every 60 seconds
-    }
+   
     
     function openJupiterModal(outputMint) {
       document.getElementById('jupiter-modal').style.display = 'flex';
